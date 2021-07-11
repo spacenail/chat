@@ -3,12 +3,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 <?javafx.scene.control.Label?>
-
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <VBox fx:controller="sample.Controller"
       xmlns:fx="http://javafx.com/fxml" alignment="center">
 <TextArea editable="false" VBox.vgrow="ALWAYS" fx:id="textArea"/>
 <Label/>
-<TextField text="Введите сообщение" fx:id="inputText"/>
-<Button text="Отправить" onAction="#btnClickAction"/>
+<TextField fx:id="inputText" onAction="#enterAction"/>
+<AnchorPane>
+<Button AnchorPane.leftAnchor="1" text="Отправить" onAction="#btnClickAction"/>
+<Button AnchorPane.rightAnchor="1" text="Очистить" onAction="#btnClickActionClear"/>
+</AnchorPane>
 </VBox>
